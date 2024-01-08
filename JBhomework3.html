@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<title> Vending Machine </title>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="JBStyles.css">
+    <script src="JBScripts.js"></script>
+</head>
+
+<body>
+    <form>
+    <table>
+        <tr>
+            <td>
+                <input type="checkbox" id="cheeto" class = "item-button" onclick="addPrice(1.25); setCurrentAmount(1.25);">
+                <label for="cheeto">Cheetos <br> $1.25 <br> </label> <br>
+                <img src="hotCheetos.jpeg" alt="a bag of flaming hot cheetos" class="image-class"> <br>
+            </td>
+            <td>
+                <input type="checkbox" id="snickers" class="item-button" onclick="addPrice(2.25); setCurrentAmount(2.25);">
+                <label for ="snickers"> Snickers <br> $2.25 <br> </label> <br>
+                <img src="snickers.jpeg" alt="a snickers candy bar" class="image-class"> <br>
+            </td>
+            <td>
+                <input type="checkbox" id="hubba" class = "item-button" onclick="addPrice(0.70); setCurrentAmount(0.70);">
+                <label for="hubba">Hubba Bubba <br> $0.70 <br> </label> <br>
+                <img src="hubbaBubba.jpeg" alt="hubba bubba bubblegum package" class="image-class"> <br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <input type="checkbox" id="cherryCoke" class = "item-button" onclick="addPrice(2.50); setCurrentAmount(2.50);">
+                <label for="cherryCoke">Cherry Coke <br> $2.50 <br> </label> <br>
+                <img src="cherryCoke.jpeg" alt="can of cherry coke soda" class="image-class"> <br>
+            </td>
+            <td>
+                <input type="checkbox" id="coolRanch" class = "item-button" onclick="addPrice(1.25); setCurrentAmount(1.25);">
+                <label for="coolRanch">Doritos <br> $1.25 <br> </label> <br>
+                <img src="doritos.jpeg" alt="a bag of cool ranch doritos" class="image-class"> <br>
+            </td>
+            <td>
+                <input type="checkbox" id="skittles" class = "item-button" onclick="addPrice(1.50); setCurrentAmount(1.50);">
+                <label for="skittles">Skittles <br> $1.50 <br> </label> <br>
+                <img src="skittles.jpeg" alt="a bag of skittles" class="image-class"> <br>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="amountDisplay">
+                Total
+                <br>
+                <br>
+                <span id="totalAmount">0.00</span>
+                </div>
+            </td>
+            <td>
+                <div id="currentDisplay">
+                Item Price
+                <br>
+                <br>
+                <span id="currentAmount">0.00</span>
+            </div>
+            </td>
+            <td>
+                <div id="moneyRemaining">0.00</div>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="3">
+                <button class="done-button" onclick="calculateChange()" type="button">
+                    Done
+                </button>
+                <button class="done-button" onclick="getSpendingAmount()" type="button">
+                Add Money
+                </button>  
+                <input type="reset" value="Reset" class="done-button" onclick="setCurrentAmount(0); resetTotalAmount();">  
+                <button class="done-button" onclick="displayTotalMade()" type="button">Quit</button>
+     
+        </td>
+        </tr>
+    </table>
+</form>
+</body>
+</html>
